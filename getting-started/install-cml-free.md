@@ -118,7 +118,7 @@ ssh admin@192.168.1.250
 Use the lab credentials (password: `cisco123`). The IP depends on which lab you imported:
 
 - **ai-network-documentation** and **api-automation-pipeline**: paste each device's block from that folder's `lab-configurations.cfg` into its console first. That sets the IPs listed in the folder's README (core-rtr-01 at 192.168.1.250, access-sw-01 at 192.168.1.251).
-- **quickstart-scripts**: this folder has no config file. The scripts and `OUTPUT_EXAMPLES.md` expect Router1 at 192.168.1.10, Router2 at 192.168.1.11, and Switch1 at 192.168.1.12, so configure those addresses and SSH on the devices yourself, then test with `ssh admin@192.168.1.10`.
+- **quickstart-scripts**: this folder has no config file. Its [README](../scripts/netmiko/quickstart-scripts/README.md) lists the addresses the scripts expect (Router1 at 192.168.1.10, Router2 at 192.168.1.11, Switch1 at 192.168.1.12), so configure those addresses and SSH on the devices yourself, then test with `ssh admin@192.168.1.10`.
 
 If the connection succeeds, your lab is ready.
 
@@ -136,7 +136,7 @@ Make sure all nodes show "BOOTED" in the CML UI. Devices that are still initiali
 This usually means the VMware bridge adapter selection is wrong. Open the Virtual Network Editor and explicitly select your active NIC instead of "Automatic."
 
 **SSH connection refused or timeout.**
-Double-check the device management IP against the README (or `OUTPUT_EXAMPLES.md` for quickstart-scripts) in the folder you imported the lab from, and confirm the device's config was actually applied. If the IP does not respond to ping, the issue is Layer 2/3 between your host and the CML bridge. Verify the bridge adapter and check for firewall rules on your host that might block traffic to the lab subnet.
+Double-check the device management IP against the README in the folder you imported the lab from, and confirm the device's config was actually applied. If the IP does not respond to ping, the issue is Layer 2/3 between your host and the CML bridge. Verify the bridge adapter and check for firewall rules on your host that might block traffic to the lab subnet.
 
 ---
 
