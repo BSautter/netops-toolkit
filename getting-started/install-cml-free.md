@@ -73,8 +73,12 @@ Accept the self-signed certificate warning and log in with username `admin` and 
 ## Step 6: Import the Lab Topology
 
 1. In the CML web UI, click **Import** (or use the menu under Labs).
-2. Select the `NetMiko-Lab.yaml` file from this repo's root directory.
+2. Select the `NetMiko-Lab.yaml` file from the folder of the script you plan to run. Each script folder under `scripts/netmiko/` ships its own copy, and they are not all the same lab:
+   - `scripts/netmiko/quickstart-scripts/NetMiko-Lab.yaml`: Router1, Router2, and Switch1
+   - `scripts/netmiko/ai-network-documentation/NetMiko-Lab.yaml` and `scripts/netmiko/api-automation-pipeline/NetMiko-Lab.yaml`: core-rtr-01, edge-rtr-01, and access-sw-01
 3. The topology will appear in your lab list.
+
+The YAML files build the topology only. The device nodes carry no configuration, so none of them sets a management IP. Where the IPs come from is covered in Verifying Connectivity below.
 
 ---
 
@@ -111,7 +115,10 @@ Once the lab is running and the External Connector is bridged correctly, test SS
 ssh admin@192.168.1.250
 ```
 
-Use the lab credentials (password: `cisco123`). The IP will match what is assigned in the lab topology YAML. Check the topology file for the management IPs of each device.
+Use the lab credentials (password: `cisco123`). The IP depends on which lab you imported:
+
+- **ai-network-documentation** and **api-automation-pipeline**: paste each device's block from that folder's `lab-configurations.cfg` into its console first. That sets the IPs listed in the folder's README (core-rtr-01 at 192.168.1.250, access-sw-01 at 192.168.1.251).
+- **quickstart-scripts**: this folder has no config file. The scripts and `OUTPUT_EXAMPLES.md` expect Router1 at 192.168.1.10, Router2 at 192.168.1.11, and Switch1 at 192.168.1.12, so configure those addresses and SSH on the devices yourself, then test with `ssh admin@192.168.1.10`.
 
 If the connection succeeds, your lab is ready.
 
@@ -129,7 +136,7 @@ Make sure all nodes show "BOOTED" in the CML UI. Devices that are still initiali
 This usually means the VMware bridge adapter selection is wrong. Open the Virtual Network Editor and explicitly select your active NIC instead of "Automatic."
 
 **SSH connection refused or timeout.**
-Double-check the device management IP in the topology YAML. If the IP does not respond to ping, the issue is Layer 2/3 between your host and the CML bridge. Verify the bridge adapter and check for firewall rules on your host that might block traffic to the lab subnet.
+Double-check the device management IP against the README (or `OUTPUT_EXAMPLES.md` for quickstart-scripts) in the folder you imported the lab from, and confirm the device's config was actually applied. If the IP does not respond to ping, the issue is Layer 2/3 between your host and the CML bridge. Verify the bridge adapter and check for firewall rules on your host that might block traffic to the lab subnet.
 
 ---
 
