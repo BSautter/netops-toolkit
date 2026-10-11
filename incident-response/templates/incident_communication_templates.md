@@ -1,5 +1,5 @@
 # Network Incident Communication Templates
-## GTalks Tech - "It's Not the Network" Kit
+## G Talks Tech - "It's Not the Network" Kit
 
 ---
 
@@ -500,4 +500,4 @@ For more practical network engineering workflows and templates, visit https://gt
 
 ---
 
-© 2026 GTalks Tech - "It's Not the Network" Incident Communication Templates
+© 2026 G Talks Tech - "It's Not the Network" Incident Communication Templates
