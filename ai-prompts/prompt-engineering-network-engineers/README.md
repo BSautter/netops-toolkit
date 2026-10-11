@@ -54,4 +54,4 @@ The pack ends with six anti-patterns -- the places AI still gets networking wron
 
 ## License
 
-Free to use, copy, adapt, and redistribute. Attribution appreciated but not required. The pack is published under the same terms as the rest of [netops-toolkit](https://github.com/GTalksTech/netops-toolkit).
+MIT. See the [LICENSE](../../LICENSE) file at the root of netops-toolkit.

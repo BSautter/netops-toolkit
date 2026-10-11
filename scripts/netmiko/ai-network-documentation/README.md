@@ -140,4 +140,4 @@ Always use `getpass` (already built in) to enter credentials at runtime.
 
 ## License
 
-MIT
+MIT. See the [LICENSE](../../../LICENSE) file at the root of netops-toolkit.

@@ -275,4 +275,4 @@ passwords on anything that matters.
 
 ## License
 
-MIT
+MIT. See the [LICENSE](../../../LICENSE) file at the root of netops-toolkit.

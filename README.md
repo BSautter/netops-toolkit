@@ -131,3 +131,9 @@ This is a solo project, but issues are open and I read all of them.
 Prefer email, or have something you would rather not post in public? garrett@gtalkstech.com.
 
 One ask: this is a public repo, so scrub your own hostnames, IP addressing, serials, credentials, and customer or employer names before pasting output. Lab output from the CML topologies here is already public by design, so that needs no redaction.
+
+---
+
+## License
+
+[MIT](LICENSE). Use, copy, adapt, and redistribute anything here, at home or at work. Keep the copyright notice with copies.

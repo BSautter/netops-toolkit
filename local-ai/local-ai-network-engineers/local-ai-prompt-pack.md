@@ -204,6 +204,4 @@ or commands.
 
 ## License
 
-Free to use, copy, adapt, and redistribute. Attribution appreciated but not
-required. Published under the same terms as the rest of
-[netops-toolkit](https://github.com/GTalksTech/netops-toolkit).
+MIT. See the [LICENSE](../../LICENSE) file at the root of netops-toolkit.

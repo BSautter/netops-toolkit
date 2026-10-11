@@ -243,4 +243,4 @@ Set `NETDEV_USER`, `NETDEV_PASS`, `NETDEV_ENABLE`, and your API key in
 
 ## License
 
-MIT
+MIT. See the [LICENSE](../../../LICENSE) file at the root of netops-toolkit.
